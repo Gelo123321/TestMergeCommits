@@ -26,6 +26,19 @@ namespace Program
     {
         static void Main()
         {
+}
+
+  public static string LicenseCustomFieldsToXml(LicenseCustomFields customFields) {
+            CustomOptions lCustomOptions = new CustomOptions();
+            lCustomOptions.Options.Add(Name, customFields.Name);
+            lCustomOptions.Options.Add(MaxUserAccounts, customFields.MaxUserAccounts.ToString());
+            lCustomOptions.Options.Add(FunctionalityLimits, customFields.FunctionalityLimits);
+            lCustomOptions.Options.Add(DoNotAllowRunOnVm, customFields.DoNotAllowRunOnVm.ToString());
+            lCustomOptions.Options.Add(DoNotAllowRunOnSos, customFields.DONotAllowRunOnSos.ToString());
+            lCustomOptions.Options.Add(ExpirationDate, customFields.ExpirationDate.ToString(CultureInfo.InvariantCulture));
+
+            return lCustomOptions.AsString();
+        }
             String strHostName = string.Empty; //getting the Host Name.
             strHostName = Dns.GetHostName();
             Console.WriteLine("Local Machine's Host Name: " + strHostName);
