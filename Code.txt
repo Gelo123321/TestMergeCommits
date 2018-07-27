@@ -106,6 +106,29 @@ void magicsq(int size, int a[][10])
     printf("\n");
 }
 
+Enter the value of n
+7
+Enter 7 names
+heap
+stack
+queue
+object
+class
+program
+project
+ 
+----------------------------------------
+Input Names    Sorted names
+------------------------------------------
+heap           class
+stack          heap
+queue          object
+object         program
+class          project
+program        queue
+project        stack
+------------------------------------------
+
  /*
      * C program to read N names, store them in the form of an array
      * and sort them in alphabetical order. Output the given names and
